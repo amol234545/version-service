@@ -9,6 +9,7 @@ fastify.get("/versions", function (request, reply) {
 fastify.get("/current", function (request, reply) {
    return data.current
 });
+fastify.get("/",() => return `https://${process.env.PROJECT_DOMAIN}.glitch.me`)
 fastify.listen(
   { port: process.env.PORT, host: "0.0.0.0" },
   function (err, address) {
